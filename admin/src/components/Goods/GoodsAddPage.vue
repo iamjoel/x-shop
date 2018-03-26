@@ -47,10 +47,8 @@
             <el-input-number v-model="infoForm.goods_number" :min="0"></el-input-number>
           </el-form-item>
           <el-form-item label="推荐类型">
-            <el-checkbox-group v-model="infoForm.type">
-              <el-checkbox label="新品" name="type"></el-checkbox>
-              <el-checkbox label="人气" name="type"></el-checkbox>
-            </el-checkbox-group>
+            <el-checkbox label="新品" name="type" v-model="infoForm.is_new"></el-checkbox>
+            <el-checkbox label="人气" name="type" v-model="infoForm.is_hot"></el-checkbox>
           </el-form-item>
           <el-form-item label="上架">
             <el-switch on-text="" off-text=""
@@ -91,7 +89,6 @@
           goods_brief: '',
           pic_url: '',
           sort_order: 100,
-          is_show: true,
           floor_price: 0,
           app_list_pic_url: '',
           is_new: false,
@@ -118,11 +115,14 @@
         this.$router.go(-1);
       },
       onSubmitInfo() {
+        var infoForm = this.infoForm
         this.$refs['infoForm'].validate((valid) => {
           if (valid) {
             this.axios.post('goods/store', {
-              ...this.infoForm,
-              category_id: this.infoForm.category_id[1]
+              ...infoForm,
+              is_new: infoForm.is_new,
+              is_hot: infoForm.is_hot,
+              category_id: infoForm.category_id[1]
             }).then((response) => {
               if (response.data.errno === 0) {
                 this.$message({
@@ -169,7 +169,7 @@
         }).then((response) => {
           let resInfo = response.data.data;
           resInfo.is_new = resInfo.is_new ? true : false;
-          resInfo.is_show = resInfo.is_show ? true : false;
+          resInfo.is_hot = resInfo.is_hot ? true : false;
           resInfo.category_id = [resInfo.category_id]
           that.infoForm = resInfo;
           cb()
