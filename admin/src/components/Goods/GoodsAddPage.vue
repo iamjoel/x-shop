@@ -43,8 +43,12 @@
             </el-upload>
             <div class="form-tip">图片尺寸：750*420</div>
           </el-form-item>
-          <el-form-item label="规格/库存" prop="goods_number">
+          <el-form-item label="库存" prop="goods_number">
             <el-input-number v-model="infoForm.goods_number" :min="0"></el-input-number>
+          </el-form-item>
+          <el-form-item label="商品价格" prop="unit_price">
+            <el-input v-model.number="infoForm.unit_price" :rows="3"></el-input>
+            <div class="form-tip"></div>
           </el-form-item>
           <el-form-item label="推荐类型">
             <el-checkbox label="新品" name="type" v-model="infoForm.is_new"></el-checkbox>
@@ -95,7 +99,8 @@
           new_pic_url: "",
           new_sort_order: 10,
           goods_number: 0,
-          is_on_sale: 0
+          is_on_sale: 0,
+          unit_price: null,
         },
         infoRules: {
           name: [
@@ -106,6 +111,9 @@
           ],
           list_pic_url: [
             { required: true, message: '请选择商品图片', trigger: 'blur' },
+          ],
+          unit_price: [
+            { required: true, message: '请输入商品价格', trigger: 'blur', type: 'number'},
           ],
         },
       }
