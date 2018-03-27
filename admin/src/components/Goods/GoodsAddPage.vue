@@ -144,15 +144,7 @@
       },
       handleUploadImageSuccess(res, file) {
         if (res.errno === 0) {
-          switch (res.data.name) {
-            //商品图片
-            case 'brand_pic':
-              this.$set('infoForm.list_pic_url', res.data.fileUrl);
-              break;
-            case 'brand_new_pic':
-              this.$set('infoForm.new_pic_url', res.data.fileUrl);
-              break;
-          }
+          this.infoForm.list_pic_url = res.data.fileUrl;
         }
       },
       fetchInfo(cb) {
