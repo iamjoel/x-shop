@@ -101,6 +101,8 @@
           goods_number: 0,
           is_on_sale: 0,
           unit_price: null,
+          goods_unit: '件',// 未弄到编辑的那
+          primary_pic_url: 'xxx' // 未弄到编辑的那
         },
         infoRules: {
           name: [
@@ -157,6 +159,7 @@
       },
       fetchInfo(cb) {
         if (this.infoForm.id <= 0) {
+          cb()
           return false
         }
 
@@ -192,7 +195,7 @@
                 children: data.data
                   .filter(subCategory => subCategory.level == 2 && subCategory.parent_id == category.id)
                   .map(subCategory => {
-                    if(subCategory.id == this.infoForm.category_id[0]) {
+                    if(this.infoForm.category_id && subCategory.id == this.infoForm.category_id[0]) {
                       // 找到二级分类对应的一级分类的id
                       this.infoForm.category_id = [category.id, this.infoForm.category_id[0]]
                     }
