@@ -17,12 +17,9 @@ instance.run();
 
 
 // 上传图片的路径，如果不存在，则创建。
-const uploadImgDictory  = './www/static/upload/brand'
+const uploadBrandImgDictory  = './www/static/upload/brand'
+const uploadCategoryImgDictory  = './www/static/upload/category'
 const fs = require('fs-extra')
-fs.ensureDir(uploadImgDictory) 
-.then(() => {
-  console.log('success!')
-})
-.catch(err => {
-  console.error(err)
-})
+fs.ensureDir(uploadBrandImgDictory) 
+fs.ensureDir(uploadCategoryImgDictory) 
+

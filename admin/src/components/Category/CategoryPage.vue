@@ -20,7 +20,7 @@
 							{{ scope.row.level == 2 ? '　' : '' }} {{scope.row.name}}
 						</template>
 					</el-table-column>
-					<el-table-column prop="is_show" label="是否显示" width="100">
+					<el-table-column prop="is_show" label="是否启用" width="100">
 						<template scope="scope">
 							{{ scope.row.is_show == 1 ? '是' : '否' }}
 						</template>
