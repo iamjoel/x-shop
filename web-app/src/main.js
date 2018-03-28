@@ -14,6 +14,8 @@ Vue.use(MintUI)
 
 Vue.config.productionTip = false
 
+import axios from 'axios'
+Vue.prototype.$http = axios
 
 require('@/service/interceptor') // axios 拦截器，做通用报错等
 
@@ -22,6 +24,7 @@ require('@/filters')
 import store from '@/store'
 
 import router from './router'
+
 // router.beforeEach((to, from, next) => {
   
 // })
