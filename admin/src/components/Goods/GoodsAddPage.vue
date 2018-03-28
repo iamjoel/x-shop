@@ -20,7 +20,7 @@
           <el-form-item label="商品名称" prop="name">
             <el-input v-model="infoForm.name"></el-input>
           </el-form-item>
-          <el-form-item label="所属品牌">
+          <el-form-item label="所属品牌" prop="brand_id">
             <el-select v-model="infoForm.brand_id" placeholder="请选择品牌">
               <el-option
                 v-for="item in brands"
@@ -34,7 +34,16 @@
             <el-input type="textarea" v-model="infoForm.goods_brief" :rows="3"></el-input>
             <div class="form-tip"></div>
           </el-form-item>
-          <el-form-item label="商品图片" prop="list_pic_url">
+          <el-form-item label="商品主图" prop="primary_pic_url">
+            <el-upload class="image-uploader" name="brand_pic"
+                       action="http://127.0.0.1:8360/admin/upload/brandPic" :show-file-list="true"
+                       :on-success="handleUploadPrimaryImageSuccess" :headers="uploaderHeader">
+              <img v-if="infoForm.primary_pic_url" :src="infoForm.primary_pic_url" class="image-show">
+              <i v-else class="el-icon-plus image-uploader-icon"></i>
+            </el-upload>
+            <div class="form-tip">图片尺寸：750*420</div>
+          </el-form-item>
+          <el-form-item label="商品列表图片" prop="list_pic_url">
             <el-upload class="image-uploader" name="brand_pic"
                        action="http://127.0.0.1:8360/admin/upload/brandPic" :show-file-list="true"
                        :on-success="handleUploadImageSuccess" :headers="uploaderHeader">
@@ -46,8 +55,8 @@
           <el-form-item label="库存" prop="goods_number">
             <el-input-number v-model="infoForm.goods_number" :min="0"></el-input-number>
           </el-form-item>
-          <el-form-item label="商品价格" prop="unit_price">
-            <el-input v-model.number="infoForm.unit_price" :rows="3"></el-input>
+          <el-form-item label="商品价格" prop="retail_price">
+            <el-input v-model.number="infoForm.retail_price" :rows="3"></el-input>
             <div class="form-tip"></div>
           </el-form-item>
           <el-form-item label="推荐类型">
@@ -89,6 +98,7 @@
           category_id: null,
           name: "",
           brand_id: null,
+          primary_pic_url: null,
           list_pic_url: '',
           goods_brief: '',
           pic_url: '',
@@ -100,21 +110,26 @@
           new_sort_order: 10,
           goods_number: 0,
           is_on_sale: 0,
-          unit_price: null,
+          retail_price: null,
           goods_unit: '件',// 未弄到编辑的那
-          primary_pic_url: 'xxx' // 未弄到编辑的那
         },
         infoRules: {
           name: [
             { required: true, message: '请输入名称', trigger: 'blur' },
           ],
+          brand_id: [
+            { required: true, message: '请选择品牌', trigger: 'blur',type: 'number' },
+          ],
           goods_brief: [
             { required: true, message: '请输入简介', trigger: 'blur' },
+          ],
+          primary_pic_url: [
+            { required: true, message: '请选择商品主图', trigger: 'blur' },
           ],
           list_pic_url: [
             { required: true, message: '请选择商品图片', trigger: 'blur' },
           ],
-          unit_price: [
+          retail_price: [
             { required: true, message: '请输入商品价格', trigger: 'blur', type: 'number'},
           ],
         },
@@ -155,6 +170,11 @@
       handleUploadImageSuccess(res, file) {
         if (res.errno === 0) {
           this.infoForm.list_pic_url = res.data.fileUrl;
+        }
+      },
+      handleUploadPrimaryImageSuccess(res, file) {
+        if (res.errno === 0) {
+          this.infoForm.primary_pic_url = res.data.fileUrl;
         }
       },
       fetchInfo(cb) {
