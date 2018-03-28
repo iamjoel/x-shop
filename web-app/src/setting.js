@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'development') {
 const SERVER_PREFIX = `${HOST}/public`
 export const IMGS_PREFIX = `${HOST}/public/imgs`
 
-const ApiRootUrl = 'http://192.168.2.101:8360/api/';
+const ApiRootUrl = 'http://127.0.0.1:8360/api/';
 
 
 export const urls = {
