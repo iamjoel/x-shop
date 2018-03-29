@@ -28,10 +28,13 @@
     <div class="container">
         <sidebar></sidebar>
         <navbar></navbar>
-        <div class="content">
+        <div class="content" v-if="$route.path !== '/dashboard'">
             <transition name="router-fade" mode="out-in">
                 <router-view></router-view>
             </transition>
+        </div>
+        <div class="content" v-else>
+            欢迎！
         </div>
     </div>
 </template>
@@ -42,6 +45,7 @@
     export default {
         data() {
             return {
+
                 dialogVisible: false
             }
         },
@@ -57,6 +61,8 @@
                 console.log(key, keyPath);
             }
         },
+        mounted() {
+        }
     }
 
 </script>

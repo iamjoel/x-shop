@@ -123,10 +123,10 @@
                     switch (res.data.name) {
                         //品牌图片
                         case 'brand_pic':
-                            this.$set('infoForm.list_pic_url', res.data.fileUrl);
+                            this.infoForm.list_pic_url = res.data.fileUrl;
                             break;
                         case 'brand_new_pic':
-                            this.$set('infoForm.new_pic_url', res.data.fileUrl);
+                            this.infoForm.new_pic_url = res.data.fileUrl;
                             break;
                     }
                 }
