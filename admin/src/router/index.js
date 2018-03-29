@@ -66,21 +66,31 @@ export default new Router({
                     name: 'topic',
                     component: resolve => {lazyLoading(resolve, 'Topic/TopicPage')}
                 },
-              {
-                path: 'operate/topic/add',
-                name: 'topic_add',
-                component: resolve => {lazyLoading(resolve, 'Topic/TopicAddPage')}
-              },
-              {
-                path: 'user',
-                name: 'user',
-                component: resolve => {lazyLoading(resolve, 'User/UserPage')}
-              },
-              {
-                path: 'user/add',
-                name: 'user_add',
-                component: resolve => {lazyLoading(resolve, 'User/UserAddPage')}
-              },
+                {
+                  path: 'operate/topic/add',
+                  name: 'topic_add',
+                  component: resolve => {lazyLoading(resolve, 'Topic/TopicAddPage')}
+                },
+                {
+                    path: 'operate/ad',
+                    name: 'ad',
+                    component: resolve => {lazyLoading(resolve, 'Ad/AdPage')}
+                },
+                {
+                  path: 'operate/ad/add',
+                  name: 'ad_add',
+                  component: resolve => {lazyLoading(resolve, 'Ad/AdAddPage')}
+                },
+                {
+                  path: 'user',
+                  name: 'user',
+                  component: resolve => {lazyLoading(resolve, 'User/UserPage')}
+                },
+                {
+                  path: 'user/add',
+                  name: 'user_add',
+                  component: resolve => {lazyLoading(resolve, 'User/UserAddPage')}
+                },
             ]
         },
         {
