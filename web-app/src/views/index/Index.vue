@@ -1,10 +1,16 @@
 <template>
   <div class="main">
     <van-swipe :autoplay="3000" class="banner">
-      <van-swipe-item>1</van-swipe-item>
-      <van-swipe-item>2</van-swipe-item>
-      <van-swipe-item>3</van-swipe-item>
-      <van-swipe-item>4</van-swipe-item>
+      <van-swipe-item v-for="item in banner" :key="item.id">
+        <a href="javascript:void(0)">
+          <div :style="{
+            'background-image': 'url(' + item.image_url + ')', 
+            'background-size': 'cover',
+            height: '3.56rem',
+            width: '100%'
+          }"></div>
+        </a>
+      </van-swipe-item>
     </van-swipe>
     <div class="m-menu">
       <a href="javascript:void(0)" class="item" v-for="item in channel" :key="item.id">
@@ -18,50 +24,14 @@
           <span class="txt">品牌制造商直供</span>
         </a>
       </div>
-      <div class="b">
-        <div class="item item-1">
+      <div class="c">
+        <div class="item item-1" v-for="item in brand" :key="item.id">
           <a href="javascript:void(0)">
             <div class="wrap">
-              <img src="###" class="img">
+              <img :src="item.new_pic_url" class="img">
               <div class="mt">
-                <span class="brand">CK制造商</span>
-                <span class="price">39</span>
-                <span class="unit">元起</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="item item-1">
-          <a href="javascript:void(0)">
-            <div class="wrap">
-              <img src="###" class="img">
-              <div class="mt">
-                <span class="brand">CK制造商</span>
-                <span class="price">39</span>
-                <span class="unit">元起</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="item item-1">
-          <a href="javascript:void(0)">
-            <div class="wrap">
-              <img src="###" class="img">
-              <div class="mt">
-                <span class="brand">CK制造商</span>
-                <span class="price">39</span>
-                <span class="unit">元起</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="item item-1">
-          <a href="javascript:void(0)">
-            <div class="wrap">
-              <img src="###" class="img">
-              <div class="mt">
-                <span class="brand">CK制造商</span>
-                <span class="price">39</span>
+                <span class="brand">{{item.name}}</span>
+                <span class="price">{{item.floor_price}}</span>
                 <span class="unit">元起</span>
               </div>
             </div>
@@ -69,7 +39,7 @@
         </div>
       </div>
     </div>
-    <div class="a-section a-new">
+    <div class="a-section a-new" v-if="newGoods.length > 0">
       <div class="h">
         <div>
           <a href="javascript:void(0)">
@@ -77,17 +47,17 @@
           </a>
         </div>
       </div>
-      <div class="b">
-        <div class="item">
+      <div class="c">
+        <div class="item" v-for="item in newGoods" :key="item.id">
           <a href="javascript:void(0)">
-            <img src="###" class="img">
-            <span class="name">蔓越莓曲奇 200克</span>
-            <span class="price">￥36</span>
+            <img :src="item.list_pic_url" class="img">
+            <span class="name">{{item.name}}</span>
+            <span class="price">￥{{item.retail_price}}</span>
           </a>
         </div>
       </div>
     </div>
-    <div class="a-section a-popular">
+    <div class="a-section a-popular" v-if="hotGoods.length > 0">
       <div class="h">
         <div>
           <a href="javascript:void(0)">
@@ -95,15 +65,15 @@
           </a>
         </div>
       </div>
-      <div class="b">
-        <div class="item">
+      <div class="c">
+        <div class="item" v-for="item in hotGoods" :key="item.id">
           <a href="javascript:void(0)">
-            <img src="###" class="img">
+            <img :src="item.list_pic_url" class="img" style="background-size:cover">
             <div class="right">
               <div class="text">
-                <span class="name"></span>
-                <span class="desc"></span>
-                <span class="price">￥</span>
+                <span class="name">{{item.name}}</span>
+                <span class="desc">{{item.goods_brief}}</span>
+                <span class="price">￥{{item.retail_price}}</span>
               </div>
             </div>
           </a>
@@ -118,30 +88,41 @@
           </a>
         </div>
       </div>
-      <div class="b"> //未完成
-        
+      <div class="c">
+        <van-swipe @change="onChange">
+          <van-swipe-item class="item" v-for="item in topics" :key="item.id">
+            <a href="javascript:void(0)">
+              <img :src="item.scene_pic_url" class="img" style="background-size:cover">
+              <div class="np">
+                <span class="name">{{item.title}}</span>
+                <span class="price">￥{{item.price_info}}元起</span>
+              </div>
+              <span class="desc">{{item.subtitle}}</span>
+            </a>
+          </van-swipe-item>
+        </van-swipe>
       </div>
     </div>
-    <div class="good-grid">
+    <div class="good-grid" v-for="firstCategory in floorGoods" :key="firstCategory.id">
       <div class="h">
         <div>
-          <span></span>
+          <span>{{firstCategory.name}}</span>
         </div>
       </div>
-      <div class="b">
-        <div>
-          <div class="item">
+      <div class="c">
+        <div v-for="(secondCategory, index) in firstCategory.goodsList" :key="secondCategory.id">
+          <div class="item" :class="index % 2 == 0 ? '' : 'item-b'">
             <a href="javascript:void(0)" class="a">
-              <img src="###" class="img">
-              <span class="name"></span>
-              <span class="price">￥</span>
+              <img :src="secondCategory.list_pic_url" class="img" style="background-size:cover">
+              <span class="name">{{secondCategory.name}}</span>
+              <span class="price">￥{{secondCategory.retail_price}}</span>
             </a>
           </div>
         </div>
         <div class="item item-b item-more">
           <a href="javascript:void(0)" class="more-a">
-            <div class="txt"></div>
-            <img src="###" class="icon" style="background-size:cover">
+            <div class="txt">{{'更多'+firstCategory.name+'好物'}}</div>
+            <img src="./imagse/1.png" class="icon" style="background-size:cover">
           </a>
         </div>
       </div>
@@ -157,32 +138,29 @@ export default {
       newGoods: [],
       hotGoods: [],
       topics: [],
-      brands: [],
+      brand: [],
       floorGoods: [],
       banner: [],
       channel: []
     }
   },
   methods: {
-    getIndexData: function () {
+    onChange(index) {
+      Toast('当前 Swipe 索引：' + index);
+    },
+    getIndexData() {
       this.$http.get(urls.IndexUrl).then(res => {
-          debugger
-        if (res.errno === 0) {
-          this.channel = res.data.channel
-          // that.setData({
-          //   newGoods: res.data.newGoodsList,
-          //   hotGoods: res.data.hotGoodsList,
-          //   topics: res.data.topicList,
-          //   brand: res.data.brandList,
-          //   floorGoods: res.data.categoryList,
-          //   banner: res.data.banner,
-          //   channel: res.data.channel
-          // });
+        if (res.data.errno === 0) {
+          var data = res.data.data
+          this.channel = data.channel
+          this.brand = data.brandList
+          this.newGoods = data.newGoodsList
+          this.hotGoods = data.hotGoodsList
+          this.topics = data.topicList
+          this.floorGoods = data.categoryList
+          this.banner = data.banner
         }
-      }, (err)=> {
-        console.error(err)
-        debugger
-      });
+      })
     },
   },
   mounted() {

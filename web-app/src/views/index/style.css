@@ -1,23 +1,21 @@
 * {
   margin: 0;
+
 }
 .main {
+  margin-bottom: 0.99rem;
   box-sizing:border-box;
   background-color:#f4f4f4;
   font-family:PingFangSC-Light,helvetica,'Heiti SC'
 }
 .banner {
-  width: 375px;
-  height: 208.5px;
-}
-.banner image {
-  width: 100%;
-  height: 208.5px;
+  width: 6.4rem;
+  height: 3.56rem;
 }
 .m-menu {
   display: flex;
-  height: 90.5px;
-  width: 375px;
+  height: 1.79rem;
+  width: 6.4rem;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
@@ -26,14 +24,14 @@
 .m-menu .item {
   flex: 1;
   display: block;
-  padding: 10px 0;
+  padding: 0.2rem 0;
 }
 .m-menu img {
   display: block;
-  width: 29px;
-  height: 29px;
+  width: 0.57rem;
+  height: 0.57rem;
   margin: 0 auto;
-  margin-bottom: 6px;
+  margin-bottom:0.1rem;
 }
 .m-menu span {
   display: block;
@@ -45,37 +43,34 @@
 }
 
 .a-section {
-  width: 375px;
+  width: 6.4rem;
   height: auto;
   overflow: hidden;
   background: #fff;
   color: #333;
-  margin-top: 10px;
+  margin-top: 0.2rem;
 }
 .a-section .h {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  height: 65px;
+  height: 1.11rem;
 }
 .a-section .h .txt {
-  padding-right: 15px;
+  padding-right: 0.256rem;
   background: url(###) right 2px no-repeat;
-  background-size: 8.328px 13.5px;
+  background-size: 0.14rem 0.23rem;
   display: inline-block;
-  height: 18px;
+  height: 0.31rem;
   font-size: 16.5px;
-  line-height: 18px;
+  line-height: 0.31rem;
 }
-.a-brand .b {
-  width: 375px;
+.a-brand .c {
+  width: 6.4rem;
   height: auto;
   overflow: hidden;
   position: relative;
-}
-.b {
-  border: none;
 }
 .a-brand .wrap {
   position: relative;
@@ -88,14 +83,14 @@
 .a-brand .mt {
   position: absolute;
   z-index: 2;
-  padding: 13.5px 15.5px;
+  padding: 0.23rem 0.26rem;
   left: 0;
   top: 0;
 }
 .a-brand .mt .brand {
   display: block;
   font-size: 16.5px;
-  height: 21.5px;
+  height: 0.37rem;
   color: #333;
 }
 .a-brand .mt .price, .a-brand .mt .unit {
@@ -104,166 +99,166 @@
 }
 .a-brand .item-1 {
   float: left;
-  width: 187px;
-  height: 126px;
+  width: 3.19rem;
+  height: 2.15rem;
   overflow: hidden;
-  border-top: 0.5px solid #fff;
-  margin-left: 0.5px;
+  border-top: 0.02rem solid #fff;
+  margin-left: 0.02rem;
 }
 .a-brand .item-1:nth-child(2n+1){
   margin-left: 0;
-  width: 187px;
+  width: 3.19rem;
 }
 .a-brand .item-1 .img {
-  width: 187px;
-  height: 126px;
+  width: 3.19rem;
+  height: 2.15rem;
 }
-.a-new .b {
-  width: 375px;
+.a-new .c {
+  width: 6.4rem;
   height: auto;
   overflow: hidden;
-  padding: 0 15.5px 22.5px 15.5px;
+  padding: 0 0.26rem 0.38rem 0.26rem;
 }
-.a-new .b .item {
+.a-new .c .item {
   float: left;
-  width: 151px;
-  margin-top: 5px;
-  margin-left: 10.5px;
-  margin-right: 10.5px;
+  width: 2.58rem;
+  margin-top: 0.085rem;
+  margin-left: 0.18rem;
+  margin-right: 0.18rem;
 }
-.a-new .b .item-b {
-  margin-left: 21px;
+.a-new .c .item-b {
+  margin-left: 0.36rem;
 }
-.a-new .b .img {
-  width: 151px;
-  height: 151px;
+.a-new .c .img {
+  width: 2.58rem;
+  height: 2.58rem;
 }
-.a-new .b .name {
+.a-new .c .name {
   text-align: center;
   display: block;
-  width: 151px;
-  height: 17.5px;
-  margin-bottom: 7px;
+  width: 2.58rem;
+  height: 0.3rem;
+  margin-bottom: 0.12rem;
   overflow: hidden;
   font-size: 15px;
   color: #333;
 }
-.a-new .b .price {
+.a-new .c .price {
   display: block;
   text-align: center;
-  line-height: 15px;
+  line-height: 0.256rem;
   font-size: 15px;
   color: #b4282d;
 }
 
 .a-popular {
-  width: 375px;
+  width: 6.4rem;
   height: auto;
   overflow: hidden;
 }
 
-.a-popular .b .item {
-  border-top: 1px solid #d9d9d9;
-  margin: 0 10px;
-  height: 132px;
-  width: 355px;
+.a-popular .c .item {
+  border-top: 0.02rem solid #d9d9d9;
+  margin: 0 0.2rem;
+  height: 2.25rem;
+  width: 6.01rem;
 }
 
-.a-popular .b .img {
-  margin-top: 6px;
-  margin-right: 6px;
+.a-popular .c .img {
+  margin-top:0.1rem;
+  margin-right:0.1rem;
   float: left;
-  width: 120px;
-  height: 120px;
+  width: 2.05rem;
+  height: 2.05rem;
 }
 
-.a-popular .b .right {
+.a-popular .c .right {
   float: left;
-  height: 132px;
-  width: 228px;
+  height: 2.25rem;
+  width: 3.86rem;
   display: flex;
   flex-flow: row nowrap;
 }
 
-.a-popular .b .text {
+.a-popular .c .text {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  height: 132px;
-  width: 228px;
+  height: 2.25rem;
+  width: 3.89rem;
 }
 
-.a-popular .b .name {
-  width: 228px;
+.a-popular .c .name {
+  width: 3.89rem;
   display: block;
   color: #333;
-  line-height: 25px;
+  line-height: 0.43rem;
   font-size: 15px;
 }
 
-.a-popular .b .desc {
-  width: 228px;
+.a-popular .c .desc {
+  width: 3.89rem;
   display: block;
   color: #999;
-  line-height: 25px;
+  line-height: 0.43rem;
   font-size: 12.5px;
 }
 
-.a-popular .b .price {
-  width: 228px;
+.a-popular .c .price {
+  width: 3.89rem;
   display: block;
   color: #b4282d;
-  line-height: 25px;
+  line-height: 0.43rem;
   font-size: 16.5px;
 }
 
-.a-topic .b {
-  height: 266.5px;
-  width: 375px;
+.a-topic .c {
+  height: 4,55rem;
+  width: 6.4rem;
   padding: 0 0 24px 0;
 }
 
-.a-topic .b .list {
-  height: 266.5px;
-  width: 375px;
+.a-topic .c .list {
+  height: 4,55rem;
+  width: 6.4rem;
   white-space: nowrap;
 }
 
-.a-topic .b .item {
+.a-topic .c .item {
   display: inline-block;
-  height: 266.5px;
-  width: 340.25px;
-  margin-left: 15px;
+  height: 4,55rem;
+  width: 5.81rem;
+  margin-left: 0.256rem;
   overflow: hidden;
 }
 
-.a-topic .b .item:last-child {
-  margin-right: 15px;
+.a-topic .c .item:last-child {
+  margin-right: 0.256rem;
 }
 
-.a-topic .b .img {
-  height: 193.75px;
-  width: 340.25px;
-  margin-bottom: 15px;
+.a-topic .c .img {
+  height: 3.31rem;
+  width: 5.81rem;
+  margin-bottom: 0.256rem;
 }
 
-.a-topic .b .np {
-  height: 17.5px;
-  margin-bottom: 6.75px;
+.a-topic .c .np {
+  height: 0.3rem;
+  margin-bottom: 0.12rem;
   color: #333;
   font-size: 15px;
 }
 
-.a-topic .b .np .price {
-  margin-left: 10.4px;
+.a-topic .c .np .price {
+  margin-left: 0.17rem;
   color: #b4282d;
 }
 
-.a-topic .b .desc {
+.a-topic .c .desc {
   display: block;
-  height: 15px;
+  height: 0.256rem;
   color: #999;
   font-size: 12px;
   white-space: nowrap;
@@ -272,7 +267,7 @@
 }
 
 .good-grid {
-  width: 375px;
+  width: 6.4rem;
   height: auto;
   overflow: hidden;
 }
@@ -282,50 +277,50 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  height: 65px;
+  height: 1.11rem;
   font-size: 16.5px;
   color: #333;
 }
 
-.good-grid .b {
-  width: 375px;
-  padding: 0 6.12.5px;
+.good-grid .c {
+  width: 6.4rem;
+  padding: 0 0.05rem;
   height: auto;
   overflow: hidden;
 }
 
-.good-grid .b .item {
+.good-grid .c .item {
   float: left;
   background: #fff;
-  width: 182.5px;
-  margin-bottom: 3.125px;
-  height: 226px;
+  width: 3.11rem;
+  margin-bottom: 0.05rem;
+  height: 3.86rem;
   overflow: hidden;
   text-align: center;
 }
 
-.good-grid .b .item .a{
-  height: 226px;
+.good-grid .c .item .a{
+  height: 3.86rem;
   width: 100%;
 }
 
-.good-grid .b .item-b {
-  margin-left: 3.125px;
+.good-grid .c .item-b {
+  margin-left: 0.05rem;
 }
 
 .good-grid .item .img {
-  margin-top: 10px;
-  width: 151px;
-  height: 151px;
+  margin-top: 0.2rem;
+  width: 2.58rem;
+  height: 2.58rem;
 }
 
 .good-grid .item .name {
   display: block;
-  width: 182.8125px;
-  padding: 0 10px;
+  width: 3.12rem;
+  padding: 0 0.2rem;
   overflow: hidden;
-  height: 17.5px;
-  margin: 5.75px 0 11px 0;
+  height: 15px;
+  margin:0.1rem 0 0.19rem 0;
   text-align: center;
   font-size: 15px;
   color: #333;
@@ -333,8 +328,8 @@
 
 .good-grid .item .price {
   display: block;
-  width: 182.8125px;
-  height: 15px;
+  width: 3.12rem;
+  height: 0.256rem;
   text-align: center;
   font-size: 15px;
   color: #b4282d;
@@ -355,15 +350,15 @@
 }
 
 .good-grid .more-a .txt{
-  height: 16.5px;
+  height: 0.28rem;
   width: 100%;
-  line-height: 16.5px;
+  line-height: 0.28rem;
   color: #333;
   font-size: 16.5px;
 }
 
 .good-grid .more-a .icon{
-  margin: 30px auto 0 auto;
-  width: 35px;
-  height: 35px;
+  margin: 0.51rem auto 0 auto;
+  width: 0.6rem;
+  height: 0.6rem;
 }
