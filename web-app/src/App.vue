@@ -67,6 +67,5 @@ export default {
 };
 </script>
 <style src="@/assets/vendor/reset.css"></style>
-<style src="css-utils-collection"></style>
 <style src="@/assets/common.css"></style>
 

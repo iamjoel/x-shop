@@ -10,13 +10,13 @@ var routes = [
     },
   },
   {
-    path: '/classify-list',
+    path: '/goods/:id',
     meta: {
       title: '分类',
       activeTypeIndex: 1,
     },
     component: resolve => {
-      lazyLoading(resolve, 'classify-list')
+      lazyLoading(resolve, 'goods')
     },
   },
   {
