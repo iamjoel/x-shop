@@ -49,7 +49,7 @@
       </div>
       <div class="c">
         <div class="item" v-for="item in newGoods" :key="item.id">
-          <a href="javascript:void(0)">
+          <a href="javascript:void(0)" @click="$router.push('/goods/' + item.id)">
             <img :src="item.list_pic_url" class="img">
             <span class="name">{{item.name}}</span>
             <span class="price">￥{{item.retail_price}}</span>

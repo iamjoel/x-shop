@@ -1,0 +1,623 @@
+div {
+    word-break:break-all;
+    overflow:auto;
+
+}
+.main{
+    margin-bottom: 0.85rem;
+}
+.goodsimgs{
+  width: 6.4rem;
+  height: 6.4rem;
+}
+.service-policy{
+    width: 6.4rem;
+    height: 0.62rem;
+    background: #f4f4f4;
+    padding: 0 0.27rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.service-policy .item{
+    background: url(http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/servicePolicyRed-518d32d74b.png) 0 center no-repeat;
+    background-size: 0.09rem;
+    padding-left: 0.13rem;
+    display: flex;
+    align-items: center;
+    font-size: 12.5px;
+    color: #666;
+}
+.goods-info{
+    width: 6.4rem;
+    height: 2.61rem;
+    overflow: hidden;
+    background: #fff;
+}
+.goods-info .c{
+    display: block;
+    width: 6.13rem;
+    height: 100%;
+    margin-left: 0.27rem;
+    padding: 0.32rem 0.27rem 0.32rem 0;
+    border-bottom: 1px solid #f4f4f4;
+}
+.goods-info .c span{
+    display: block;
+    width: 5.79rem;
+    text-align: center;
+}
+.goods-info .name{
+    height: 0.35rem;
+    margin-bottom: 0.04rem;
+    font-size: 0.35rem;
+    line-height: 0.35rem;
+}
+.goods-info .desc{
+    height: 0.37rem;
+    margin-bottom: 0.35rem;
+    font-size: 12px;
+    line-height: 0.31rem;
+    color: #999;
+}
+.goods-info .price{
+    height: 0.3rem;
+    font-size: 0.3rem;
+    line-height: 0.3rem;
+    color: #b4282d;
+}
+.goods-info .brand{
+    margin-top: 0.2rem;
+    min-height: 0.34rem;
+    text-align: center;
+}
+.goods-info .brand span{
+    display: inline-block;
+    width: auto;
+    padding: 0.02rem 0.26rem 0.02rem 0.09rem;
+    line-height: 0.3rem;
+    border: 1px solid #f48f18;
+    font-size: 0.21rem;
+    color: #f48f18;
+    border-radius: 4px;
+    background: url(http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/detailTagArrow-18bee52dab.png) 95% center no-repeat;
+    background-size: 0.09rem 0.16rem;
+}
+.section-nav{
+    width: 6.4rem;
+    height: 0.92rem;
+    background: #fff;
+    margin-bottom: 0.17rem;
+}
+.section-nav .t{
+    float: left;
+    width: 5.12rem;
+    height: 0.92rem;
+    line-height: 0.92rem;
+    font-size: 0.25rem;
+    color: #333;
+    margin-left: 0.27rem;
+}
+.section-nav .i{
+    float: right;
+    width: 0.44rem;
+    height: 0.44rem;
+    margin-right: 0.14rem;
+    margin-top: 0.24rem;
+}
+.section-act .t{
+    float: left;
+    display: flex;
+    align-items: center;
+    width: 5.12rem;
+    height: 0.92rem;
+    overflow: hidden;
+    line-height: 0.92rem;
+    font-size: 0.25rem;
+    color: #999;
+    margin-left: 0.27rem;
+}
+.section-act .label{
+    color: #999;
+}
+.section-act .tag{
+    display: flex;
+    align-items: center;
+    padding:0 0.09rem;
+    border-radius: 3px;
+    height: 0.32rem;
+    width: auto;
+    color: #f48f18;
+    overflow: hidden;
+    border: 1px solid #f48f18;
+    font-size: 0.21rem;
+    margin:0 0.09rem;
+}
+.section-act .text{
+    display: flex;
+    align-items: center;
+    height: 0.32rem;
+    width: auto;
+    overflow: hidden;
+    color: #f48f18;
+    font-size: 0.25rem;
+}
+.comments{
+    width: 100%;
+    height: auto;
+    padding-left:0.26rem;
+    background: #fff;
+    margin: 0.17rem 0;
+}
+.comments .h{
+    height: 0.87rem;
+    line-height: 0.86rem;
+    width: 6.13rem;
+    padding-right: 0.14rem;
+    border-bottom: 1px solid #d9d9d9;
+}
+.comments .h .t{
+    display: block;
+    float: left;
+    width: 50%;
+    font-size: 0.33rem;
+    color: #333;
+}
+.comments .h .i{
+    display: block;
+    float: right;
+    width: 1.4rem;
+    height: 0.86rem;
+    line-height: 0.86rem;
+    background: url(http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/address-right-990628faa7.png) right center no-repeat;
+    background-size: 0.44rem;
+}
+.comments .b{
+    height: auto;
+    width: 6.14rem;
+}
+.comments .item{
+    height: auto;
+    width: 6.14rem;
+    overflow: hidden;
+}
+.comments .info{
+    height: 1.08rem;
+    width: 100%;
+    padding: 0.28rem 0 0.23rem 0;
+}
+.comments .user{
+    float: left;
+    width: auto;
+    height: 0.57rem;
+    line-height: 0.57rem;
+    font-size: 0;
+}
+.comments .user img{
+    float: left;
+    width: 0.57rem;
+    height: 0.57rem;
+    margin-right: 0.15rem;
+    border-radius: 50%;
+}
+.comments .user span{
+    display: inline-block;
+    width: auto;
+    height: 0.56rem;
+    overflow: hidden;
+    font-size: 0.25rem;
+    line-height: 0.56rem;
+}
+.comments .time{
+    display: block;
+    float: right;
+    width: auto;
+    height: 0.57rem;
+    line-height: 0.57rem;
+    color: #7f7f7f;
+    font-size: 0.21rem;
+    margin-right: 0.26rem;
+}
+.comments .content{
+    width: 6.14rem;
+    padding-right: 0.26rem;
+    line-height: 0.39rem;
+    font-size: 0.25rem;
+    margin-bottom: 0.2rem;
+}
+.comments .imgs{
+    width: 6.14rem;
+    height: auto;
+    margin-bottom: 0.21rem;
+}
+.comments .imgs .img{
+    height: 1.28rem;
+    width: 1.28rem;
+    margin-right: 0.24rem;
+}
+.comments .spec{
+    width: 6.14rem;
+    padding-right: 0.26rem;
+    line-height: 0.26rem;
+    font-size: 0.2rem;
+    color: #999;
+    margin-bottom: 0.26rem;
+}
+.goods-attr{
+    width: 6.4rem;
+    height: auto;
+    overflow: hidden;
+    padding: 0 0.27rem 0.21rem 0.27rem;
+    background: #fff;
+}
+.goods-attr .t{
+    width: 5.79rem;
+    height: 0.89rem;
+    line-height: 0.89rem;
+    font-size: 0.33rem;
+}
+.goods-attr .item{
+    width: 5.79rem;
+    height: 0.58rem;
+    padding: 0.09rem 0.17rem;
+    margin-bottom: 0.09rem;
+    background: #f7f7f7;
+    font-size: 0.33rem;
+}
+.goods-attr .left{
+    float: left;
+    font-size: 0.21rem;
+    width: 1.14rem;
+    height: 0.38rem;
+    line-height: 0.38rem;
+    overflow: hidden;
+    color: #999;
+}
+.goods-attr .right{
+    float: left;
+    font-size: 0.31rem;
+    margin-left: 0.17rem;
+    width: 4.1rem;
+    height: 0.38rem;
+    line-height: 0.38rem;
+    overflow: hidden;
+    color: #333;
+}
+.detail{
+    width: 6.4rem;
+    height: auto;
+    overflow: hidden;
+}
+.detail img{
+    width: 6.4rem;
+    display: block;
+}
+.common-problem{
+    width: 6.4rem;
+    height: auto;
+    overflow: hidden;
+}
+.common-problem .h{
+    position: relative;
+    height: 1.24rem;
+    width: 6.4rem;
+    padding: 0.48rem 0;
+    background: #fff;
+    text-align: center;
+}
+.common-problem .h .line{
+    display: inline-block;
+    position: absolute;
+    top: 0.61rem;
+    left: 0;
+    z-index: 2;
+    height: 1px;
+    margin-left: 1.92rem;
+    width: 2.56rem;
+    background: #ccc;
+}
+.common-problem .h .title{
+    display: inline-block;
+    position: absolute;
+    top: 0.48rem;
+    left: 0;
+    z-index: 3;
+    height: 0.28rem;
+    margin-left: 2.43rem;
+    width: 1.54rem;
+    background: #fff;
+}
+.common-problem .b{
+  width: 6.4rem;
+  height: auto;
+  overflow: hidden;
+  padding: 0 0.26rem;
+  background: #fff;
+
+}
+.common-problem .item{
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 0.21rem;
+}
+.common-problem .question-box .spot{
+  float: left;
+  display: block;
+  height: 0.07rem;
+  width: 0.07rem;
+  background: #b4282d;
+  border-radius: 50%;
+  margin-top: 0.09rem;
+}
+.common-problem .question-box .question{
+  float: left;
+  line-height: 0.26rem;
+  padding-left: 0.07rem;
+  display: block;
+  font-size: 0.22rem;
+  padding-bottom: 0.13rem;
+  color: #303030;
+}
+.common-problem .answer{
+  line-height: 0.31rem;
+  padding-left: 0.14rem;
+  font-size: 0.22rem;
+  color: #787878;
+}
+.related-goods{
+    width: 6.4rem;
+    height: auto;
+    overflow: hidden;
+}
+.related-goods .h{
+    position: relative;
+    height: 1.24rem;
+    width: 6.4rem;
+    padding: 0.48rem 0;
+    background: #fff;
+    text-align: center;
+    border-bottom: 1px solid #f4f4f4;
+}
+.related-goods .h .line{
+    display: inline-block;
+    position: absolute;
+    top: 0.61rem;
+    left: 0;
+    z-index: 2;
+    height: 1px;
+    margin-left: 1.92rem;
+    width: 2.56rem;
+    background: #ccc;
+}
+.related-goods .h .title{
+    display: inline-block;
+    position: absolute;
+    top: 0.48rem;
+    left: 0;
+    z-index: 3;
+    height: 0.28rem;
+    margin-left: 2.43rem;
+    width: 1.54rem;
+    background: #fff;
+}
+.related-goods .b{
+  width: 6.4rem;
+  height: auto;
+  overflow: hidden;
+}
+.related-goods .b .item{
+  float: left;
+  background: #fff;
+  width: 3.2rem;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+  padding: 0.13rem 0.27rem;
+  border-right: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+}
+.related-goods .item .img{
+  width: 2.66rem;
+  height: 2.66rem;
+}
+.related-goods .item .name{
+  display: block;
+  width: 2.66rem;
+  height: 0.25rem;
+  margin: 0.1rem 0 0.13rem 0;
+  text-align: center;
+  overflow: hidden;
+  font-size: 0.26rem;
+  color: #333;
+}
+.related-goods .item .price{
+  display: block;
+  width: 2.66rem;
+  height: 0.26rem;
+  text-align: center;
+  font-size: 0.26rem;
+  color: #b4282d;
+}
+.bottom-btn{
+    position: fixed;
+    left:0;
+    bottom:0;
+    z-index: 10;
+    width: 6.4rem;
+    height: 0.85rem;
+    display: flex;
+    background: #fff;
+}
+.bottom-btn .l{
+    float: left;
+    height: 0.85rem;
+    width: 1.38rem;
+    border: 1px solid #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.bottom-btn .l.l-collect{
+    border-right: none;
+    border-left: none;
+    text-align: center;
+}
+.bottom-btn .l.l-cart .box{
+    position: relative;
+    height: 0.51rem;
+    width: 0.51rem;
+}
+.bottom-btn .l.l-cart .cart-count{
+    height: 0.24rem;
+    width: 0.24rem;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right:0;
+    background: #b4282d;
+    text-align: center;
+    font-size: 0.15rem;
+    color: #fff;
+    line-height: 0.24rem;
+    border-radius: 50%;
+
+}
+.bottom-btn .l.l-cart .icon{
+  
+    position: absolute;
+    top: 0.09rem;
+    left:0;
+    
+}
+.bottom-btn .l .icon{
+    display: block;
+    height: 0.38rem;
+    width: 0.38rem;
+}
+.bottom-btn .c{
+    float: left;
+    height: 0.85rem;
+    line-height: 0.82rem;
+    flex: 1;
+    text-align: center;
+    color: #333;
+    border-top: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+}
+.bottom-btn .r{
+    border:1px solid #b4282d;
+    background: #b4282d;
+    float: left;
+    height: 0.85rem;
+    line-height: 0.82rem;
+    flex: 1;
+    text-align: center;
+    color: #fff;
+}
+.attr-pop{
+    width: 100%;
+    height: 100%;
+    padding: 0.27rem;
+    background: #fff;
+}
+.attr-pop .img-info{
+    width: 5.79rem;
+    height: 1.51rem;
+    overflow: hidden;
+    margin-bottom: 0.35rem;
+}
+.attr-pop .img{
+    float: left;
+    height: 1.51rem;
+    width: 1.51rem;
+    background: #f4f4f4;
+    margin-right: 0.27rem;
+}
+.attr-pop .info{
+    float: left;
+    height: 1.51rem;
+    display: flex;
+    align-items: center;
+}
+.attr-pop .p{
+    font-size: 0.28rem;
+    color: #333;
+    height: 0.28rem;
+    line-height: 0.28rem;
+    margin-bottom: 0.09rem;
+}
+.attr-pop .a{
+    font-size: 0.25rem;
+    color: #333;
+    height: 0.34rem;
+    line-height: 0.34rem;
+}
+.spec-con{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.spec-con .name{
+    height: 0.27rem;
+    margin-bottom: 0.19rem;
+    font-size: 0.25rem;
+    color: #333;
+}
+.spec-con .values{
+    height: auto;
+    margin-bottom: 0.27rem;
+    font-size: 0;
+}
+.spec-con .value{
+    display: inline-block;
+    height: 0.53rem;
+    padding: 0 0.3rem;
+    line-height: 0.48rem;
+    text-align: center;
+    margin-right: 0.21rem;
+    margin-bottom: 0.14rem;
+    border: 1px solid #333;
+    font-size: 0.21rem;
+    color: #333;
+}
+.spec-con .value.disable{
+    border: 1px solid #ccc;
+    color: #ccc;
+}
+.spec-con .value.selected{
+    border: 1px solid #b4282d;
+    color: #b4282d;
+}
+.number-item .selnum{
+    width: 2.75rem;
+    height: 0.61rem;
+    border: 1px solid #ccc;
+    display: flex;
+}
+.number-item .cut{
+    width: 0.8rem;
+    height: 100%;
+    text-align: center;
+    line-height: 0.55rem;
+}
+.number-item .number{
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    line-height: 0.59rem;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    float: left;
+}
+.number-item .add{
+    width: 0.8rem;
+    height: 100%;
+    text-align: center;
+    line-height: 0.55rem;
+}
+
+
+
+
