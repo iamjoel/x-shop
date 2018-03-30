@@ -1,0 +1,117 @@
+.main{
+    background: #f9f9f9;
+}
+.cate-nav{
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 1000;
+}
+
+.cate-nav-body{
+    height: 0.72rem;
+    white-space: nowrap;   
+    background: #fff;
+    border-top: 1px solid rgba(0,0,0,.15);
+    overflow: hidden;
+}
+
+.cate-nav .item{
+    display: inline-block;
+    height: 0.72rem;
+    min-width: 1.11rem;
+    padding: 0 0.13rem;
+}
+
+.cate-nav .item .name{
+    display: block;
+    height: 0.72rem;
+    padding: 0 0.17rem;
+    line-height: 0.72rem;
+    color: #333;
+    font-size: 0.26rem;
+    width: auto;
+}
+
+.cate-nav .item.active .name{
+    color: #ab2b2b;
+    border-bottom: 2px solid #ab2b2b;
+}
+
+.cate-item{
+    margin-top: 0.8rem;
+    height: auto;
+    overflow: hidden;
+}
+
+.cate-item .h{
+    height: 1.24rem;
+    width: 6.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cate-item .h .name{
+    display: block;
+    height: 0.3rem;
+    margin-bottom: 0.15rem;
+    font-size: 0.26rem;
+    color: #333;
+}
+
+.cate-item .h .desc{
+    display: block;
+    height: 0.2rem;
+    font-size: 0.2rem;
+    color: #999;
+}
+
+.cate-item .b{
+  width: 6.4rem;
+  padding: 0 0.05rem;
+  height: auto;
+  overflow: hidden;
+}
+
+.cate-item .b .item{
+  float: left;
+  background: #fff;
+  width: 3.11rem;
+  margin-bottom: 0.05rem;
+  padding-bottom: 0.28rem;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cate-item .b .item-b{
+  margin-left: 0.05rem;
+}
+
+.cate-item .item .img{
+  width: 2.58rem;
+  height: 2.58rem;
+}
+
+.cate-item .item .name{
+  display: block;
+  width: 6.24rem;
+  height: 0.3rem;
+  margin: 0.1rem 0 0.19rem 0;
+  text-align: center;
+  overflow: hidden;
+  padding: 0 0.17rem;
+  font-size: 0.26rem;
+  color: #333;
+}
+
+.cate-item .item .price{
+  display: block;
+  width: 6.24rem;
+  height: 0.26rem;
+  text-align: center;
+  font-size: 0.26rem;
+  color: #b4282d;
+}

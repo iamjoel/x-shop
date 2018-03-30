@@ -13,7 +13,7 @@
       </van-swipe-item>
     </van-swipe>
     <div class="m-menu">
-      <a href="javascript:void(0)" class="item" v-for="item in channel" :key="item.id">
+      <a href="javascript:void(0)" class="item" v-for="item in floorGoods" :key="item.id" @click="$router.push('/category/' + item.id)">
         <img :src="item.icon_url" style="background-size:cover">
         <span>{{item.name}}</span>
       </a>
@@ -26,7 +26,7 @@
       </div>
       <div class="c">
         <div class="item item-1" v-for="item in brand" :key="item.id">
-          <a href="javascript:void(0)">
+          <a href="javascript:void(0)" @click="$router.push('/brandDetail/' + item.id)">
             <div class="wrap">
               <img :src="item.new_pic_url" class="img">
               <div class="mt">
@@ -157,7 +157,7 @@ export default {
           this.newGoods = data.newGoodsList
           this.hotGoods = data.hotGoodsList
           this.topics = data.topicList
-          this.floorGoods = data.categoryList
+          this.floorGoods = data.categoryList.slice(0, 5)
           this.banner = data.banner
         }
       })

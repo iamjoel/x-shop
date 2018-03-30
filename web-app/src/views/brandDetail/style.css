@@ -1,0 +1,110 @@
+page {
+    background: #f4f4f4;
+}
+.brand-info .name{
+    width: 100%;
+    height: 2.47rem;
+    position: relative;
+}
+
+.brand-info .img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 2.47rem;
+}
+
+.brand-info .info-box{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 2.47rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-info .info{
+  display: block;
+}
+
+.brand-info .txt{
+  display: block;
+  height: 0.32rem;
+  font-size: 0.32rem;
+  color: #fff;
+}
+
+.brand-info .line{
+  margin: 0 auto;
+  margin-top: 0.14rem;
+  display: block;
+  height: 0.02rem;
+  width: 1.24rem;
+  background: #fff;
+}
+
+.brand-info .desc{
+  background: #fff;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 0.35rem 0.27rem;
+  font-size: 0.26rem;
+  color: #666;
+  line-height: 0.35rem;
+  text-align: center;
+}
+
+.cate-item .b{
+  width: 6.4rem;
+  height: auto;
+  overflow: hidden;
+  border-top: 1rpx solid #f4f4f4;
+  margin-top: 0.17rem;
+}
+
+.cate-item .b .item{
+  float: left;
+  background: #fff;
+  width: 3.2rem;
+  padding-bottom: 0.28rem;
+  border-bottom: 1rpx solid #f4f4f4;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cate-item .b .item-b{
+ border-right: 1rpx solid #f4f4f4;
+}
+
+.cate-item .item .img{
+  margin-top: 0.09rem;
+  width: 2.58rem;
+  height: 2.58rem;
+}
+
+.cate-item .item .name{
+  display: block;
+  width: 3.12rem;
+  height: 0.3rem;
+  padding: 0 0.17rem;
+  overflow: hidden;
+  margin: 0.1rem 0 0.19rem 0;
+  text-align: center;
+  font-size: 0.26rem;
+  color: #333;
+}
+
+.cate-item .item .price{
+  display: block;
+  width: 3.12rem;
+  height: 0.26rem;
+  text-align: center;
+  font-size: 0.26rem;
+  color: #b4282d;
+}

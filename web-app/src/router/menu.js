@@ -12,7 +12,7 @@ var routes = [
   {
     path: '/goods/:id',
     meta: {
-      title: '分类',
+      title: '',
       activeTypeIndex: 1,
     },
     component: resolve => {
@@ -20,24 +20,24 @@ var routes = [
     },
   },
   {
-    path: '/cart',
+    path: '/brandDetail/:id',
     meta: {
-      title: '购物车',
+      title: '',
       activeTypeIndex: 2,
       isShowFooter: false
     },
     component: resolve => {
-      lazyLoading(resolve, 'cart')
+      lazyLoading(resolve, 'brandDetail')
     },
   },
   {
-    path: '/member-center',
+    path: '/category/:id',
     meta: {
-      title: '个人中心',
+      title: '',
       activeTypeIndex: 3,
     },
     component: resolve => {
-      lazyLoading(resolve, 'member-center')
+      lazyLoading(resolve, 'category')
     },
   },
 ]

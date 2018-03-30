@@ -1,0 +1,52 @@
+.brand-list .item{
+    display: block;
+    width: 6.4rem;
+    height: 3.55rem;
+    position: relative;
+    margin-bottom: 0.03rem;
+}
+
+.brand-list .item .img-bg{
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 0;
+    width: 6.4rem;
+    height: 3.56rem;
+    overflow: hidden;
+}
+
+.brand-list .item .img-bg img{
+    width: 6.4rem;
+    height: 3.55rem;
+}
+
+.brand-list .item .txt-box{
+    position: absolute;
+    left:0;
+    top:0;
+    display: table;
+    z-index: 0;
+    width: 6.4rem;
+    height: 3.56rem;
+}
+
+.brand-list .item .line{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 0.54rem;
+    line-height: 0.54rem;
+}
+
+.brand-list .item .line text{
+    font-size: 0.3rem;
+    font-weight: 700;
+    text-shadow: 1rpx 1rpx rgba(0,0,0,.32);
+    color: #fff;
+}
+
+.brand-list .item .line .s{
+    padding: 0  0.09rem;
+    font-size: 0.34rem;
+}

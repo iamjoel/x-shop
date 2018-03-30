@@ -208,54 +208,54 @@ export default {
         })
       }
     },
-    addToCart () {
-      if (this.data.openAttr == false) {
-        //打开规格选择窗口
-        this.openAttr = !this.data.openAttr,
-        this.collectBackImage = "/static/images/detail_back.png"
-      } else {
-        //提示选择完整规格
-        if (!this.isCheckedAllSpec()) {
-          return false;
-        }
-        //根据选中的规格，判断是否有对应的sku信息
-        let checkedProduct = this.getCheckedProductItem(this.getCheckedSpecKey());
-        if (!checkedProduct || checkedProduct.length <= 0) {
-          //找不到对应的product信息，提示没有库存
-          return false;
-        }
-        //验证库存
-        if (checkedProduct.goods_number < this.data.number) {
-          //找不到对应的product信息，提示没有库存
-          return false;
-        }
-        //添加到购物车
-        this.$http.get(`${urls.CartAdd}, ${ this.goods.id, this.number, this.checkedProduct[0].id }, ${"POST"}`)
-          .then(res => {
-            let _res = res;
-            if (_res.errno == 0) {
-              this.wx.showToast({
-                title: '添加成功'
-              })
-              this.openAttr = !that.data.openAttr,
-              this.cartGoodsCount = _res.data.cartTotal.goodsCount
-              if (this.data.userHasCollect == 1) {
-                this.collectBackImage = this.data.hasCollectImage
-              } else {
-                this.collectBackImage = this.data.noCollectImage
-              }
-            } else {
-              this.wx.showToast({
-                image: '/static/images/icon_error.png',
-                title: _res.errmsg,
-                mask: true
-              })
-            }
+    // addToCart () {
+    //   if (this.data.openAttr == false) {
+    //     //打开规格选择窗口
+    //     this.openAttr = !this.data.openAttr,
+    //     this.collectBackImage = "/static/images/detail_back.png"
+    //   } else {
+    //     //提示选择完整规格
+    //     if (!this.isCheckedAllSpec()) {
+    //       return false;
+    //     }
+    //     //根据选中的规格，判断是否有对应的sku信息
+    //     let checkedProduct = this.getCheckedProductItem(this.getCheckedSpecKey());
+    //     if (!checkedProduct || checkedProduct.length <= 0) {
+    //       //找不到对应的product信息，提示没有库存
+    //       return false;
+    //     }
+    //     //验证库存
+    //     if (checkedProduct.goods_number < this.data.number) {
+    //       //找不到对应的product信息，提示没有库存
+    //       return false;
+    //     }
+    //     //添加到购物车
+    //     this.$http.get(`${urls.CartAdd}, ${ this.goods.id, this.number, this.checkedProduct[0].id }, ${"POST"}`)
+    //       .then(res => {
+    //         let _res = res;
+    //         if (_res.errno == 0) {
+    //           this.wx.showToast({
+    //             title: '添加成功'
+    //           })
+    //           this.openAttr = !that.data.openAttr,
+    //           this.cartGoodsCount = _res.data.cartTotal.goodsCount
+    //           if (this.data.userHasCollect == 1) {
+    //             this.collectBackImage = this.data.hasCollectImage
+    //           } else {
+    //             this.collectBackImage = this.data.noCollectImage
+    //           }
+    //         } else {
+    //           this.wx.showToast({
+    //             image: '/static/images/icon_error.png',
+    //             title: _res.errmsg,
+    //             mask: true
+    //           })
+    //         }
 
-          });
-      }
+    //       });
+    //   }
 
-    },
+    // },
     // closeAttrOrCollect() {
     //   if (this.data.openAttr) {
     //     this.openAttr = false,
