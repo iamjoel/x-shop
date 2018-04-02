@@ -89,7 +89,7 @@
     data() {
       return {
         uploaderHeader: {
-          'X-Nideshop-Token': localStorage.getItem('token') || '',
+          'xshoptoken': localStorage.getItem('token') || '',
         },
         categorys: [],
         brands: [],

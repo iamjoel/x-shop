@@ -2,12 +2,12 @@ const mysql = require('think-model-mysql');
 
 module.exports = {
   handle: mysql,
-  database: 'nideshop',
-  prefix: 'nideshop_',
+  database: 'x_shop',
+  prefix: 'x_',
   encoding: 'utf8mb4',
-  host: '47.96.189.4',
+  host: 'localhost',
   port: '3306',
   user: 'root',
-  password: 'pa!21word',
+  password: '123456',
   dateStrings: true
 };

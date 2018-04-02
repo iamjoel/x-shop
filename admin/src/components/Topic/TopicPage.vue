@@ -36,7 +36,7 @@
 					</el-table-column>
 					<el-table-column prop="sort_order" label="排序" width="80">
 					</el-table-column>
-					<el-table-column label="操作" width="140">
+					<el-table-column label="操作" width="160">
 						<template scope="scope">
 							<el-button size="small" @click="handleRowEdit(scope.$index, scope.row)">编辑</el-button>
 							<el-button size="small" type="danger" @click="handleRowDelete(scope.$index, scope.row)">删除</el-button>

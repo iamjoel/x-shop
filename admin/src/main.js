@@ -14,10 +14,9 @@ Vue.use(ElementUI);
 router.beforeEach((to, from, next) => {
 
 	let token = localStorage.getItem('token') || '';
-
     //配置接口信息
     Axios.defaults.baseURL = 'http://127.0.0.1:8360/admin/';
-    Axios.defaults.headers.common['X-Nideshop-Token'] = token;
+    Axios.defaults.headers['xshoptoken'] = token;
 
 	if (!token && to.name !== 'login') {
 		next({

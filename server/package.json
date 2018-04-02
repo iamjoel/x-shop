@@ -1,9 +1,10 @@
 {
-  "name": "nideshop",
+  "name": "x_shop",
   "description": "nideshop - open source mini program shop",
   "version": "1.0.0",
   "scripts": {
     "start": "node development.js",
+    "debug": "node --inspect development.js",
     "compile": "babel --no-babelrc src/ --presets think-node --out-dir app/",
     "lint": "eslint src/",
     "lint-fix": "eslint --fix src/"
