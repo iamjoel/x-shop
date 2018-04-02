@@ -14,16 +14,16 @@
       <div class="desc">{{brand.simple_desc}}</div>
     </div>
 
-    <div class="cate-item">
+    <!-- <div class="cate-item">
       <div class="b">
         <div v-for="item in goodsList" :key="item.id"></div>
         <a href="javascript:void(0)" class="item" :class="index % 2 == 0 ? 'item-b' : ''">
           <img :src="item.list_pic_url" class="img">
-          <span class="name">{{iitem.name}}</span>
-          <span class="price">￥{{iitem.retail_price}}</span>
+          <span class="name">{{item.name}}</span>
+          <span class="price">￥{{item.retail_price}}</span>
         </a>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -33,6 +33,7 @@ export default {
   data() {
     return {
       id: '',
+      index: null,
       brand: [],
       goodsList: [],
       page: 1,
@@ -45,18 +46,18 @@ export default {
     //   this.id: parseInt(options.id)
     //   this.getBrand();
     // },
-    // getBrand() {
-    //   this.$http.get(`${urls.BrandDetail}?id=${this.id }`).then(res => {
-    //     debugger
-    //     if (res.data.errno === 0) {
-    //       this.brand = res.data.data.brand
-    //       // this.getGoodsList();
-    //     }
-    //   });
-    // },
+    getBrand() {
+      this.$http.get(`${urls.BrandDetail}?id=${this.id }`).then(res => {
+        if (res.data.errno === 0) {
+          this.brand = res.data.data.brand
+          this.getGoodsList()
+        }
+      });
+    },
     // getGoodsList() {
-    //   this.$http.get(`${urls.GoodsList}?id=${this.id, this.page, this.size}`)
+    //   this.$http.get(`${urls.GoodsList}?brandId=${this.id}&page=${this.totalPages}&size=${this.pageSize}`)
     //     .then(res => {
+    //     debugger
     //       if (res.data.errno === 0) {
     //         this.goodsList = res.data.data.goodsList
     //       }

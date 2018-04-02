@@ -40,6 +40,16 @@ var routes = [
       lazyLoading(resolve, 'category')
     },
   },
+  {
+    path: '/topicDetail/:id',
+    meta: {
+      title: '',
+      activeTypeIndex: 4,
+    },
+    component: resolve => {
+      lazyLoading(resolve, 'topicDetail')
+    },
+  },
 ]
 
 

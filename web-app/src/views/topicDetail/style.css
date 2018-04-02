@@ -1,0 +1,193 @@
+
+a {
+    display: block;
+    height: auto;
+    width: auto;
+}
+
+.main{
+    width: 100%;
+    height: auto;
+    font-size: 0;
+    padding-bottom: 50px;
+}
+
+.main img{
+    display: inline-block;
+    width: 100%;
+}
+
+.comments{
+    width: 100%;
+    height: auto;
+    padding-left: 0.26rem;
+    background: #fff;
+    margin-top: 0.17rem;
+}
+
+.comments .h{
+    height: 0.79rem;
+    line-height: 0.79rem;
+    width: 6.14rem;
+    padding-right: 0.26rem;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.comments .h .t{
+    display: block;
+    float: left;
+    width: 50%;
+    font-size: 0.25rem;
+    color: #333;
+}
+
+.comments .h .i{
+    display: block;
+    float: right;
+    margin-top: 0.26rem;
+    width: 0.28rem;
+    height: 0.28rem;
+}
+
+.comments .b{
+    height: auto;
+    width: 6.14rem;
+}
+
+.comments .item{
+    height: auto;
+    width: 6.14rem;
+    overflow: hidden;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.comments .info{
+    height: 1.08rem;
+    width: 100%;
+    padding: 0.28rem 0 0.23rem 0;
+}
+
+.comments .user{
+    float: left;
+    width: auto;
+    height: 0.57rem;
+    line-height: 0.57rem;
+    font-size: 0;
+}
+
+.comments .user .avatar{
+    display: block;
+    float: left;
+    width: 0.57rem;
+    height: 0.57rem;
+    margin-right: 0.15rem;
+    border-radius: 50%;
+}
+
+.comments .user .nickname{
+    display: block;
+    width: auto;
+    float: left;
+    height: 0.56rem;
+    overflow: hidden;
+    font-size: 0.25rem;
+    line-height: 0.56rem;
+}
+
+.comments .time{
+    display: block;
+    float: right;
+    width: auto;
+    height: 0.57rem;
+    line-height: 0.57rem;
+    color: #7f7f7f;
+    font-size: 0.21rem;
+    margin-right: 0.26rem;
+}
+
+.comments .comment{
+    width: 6.14rem;
+    padding-right: 0.26rem;
+    line-height: 0.39rem;
+    margin-bottom: 0.26rem;
+    font-size: 0.25rem;
+    color: #333;
+}
+
+.comments .load{
+    width: 6.14rem;
+    height: 0.92rem;
+    line-height: 0.92rem;
+    text-align: center;
+    font-size: 0.33rem;
+}
+
+.no-comments{
+    height: 2.53rem;
+}
+
+.no-comments .txt{
+    height: 0.37rem;
+    line-height: 0.37rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 0.25rem;
+    color: #7f7f7f;
+}
+
+.no-comments .icon{
+    margin: 0.41rem auto 0.15rem auto;
+    height: 1.11rem;
+    display: block;
+    width: 0.98rem;
+}
+
+
+.rec-box{
+    width: 5.89rem;
+    height: auto;
+    margin: 0 0.26rem;
+}
+
+.rec-box .h{
+    position: relative;
+    width: 5.89rem;
+    height: 0.82rem;
+    margin-bottom: 0.27rem;
+}
+
+.rec-box .h .txt{
+    display: inline-block;
+    position: absolute;
+    background: #f4f4f4;
+    top: 0.5rem;
+    left: 1.71rem;
+    width: 2.47rem;
+    height: 0.38rem;
+    line-height: 0.38rem;
+    font-size: 0.26rem;
+    color: #999;
+    text-align: center;
+}
+
+.rec-box .b .item{
+    width: 5.89rem;
+    height: 3.39rem;
+    padding: 0.2rem 0.26rem 0.2rem;
+    background: #fff;
+    margin-bottom: 0.26rem;
+}
+
+.rec-box .b .item .img{
+    height: 2.37rem;
+    width: 5.48rem;
+}
+
+.rec-box .b .item .title{
+    display: block;
+    margin-top: 0.26rem;
+    height: 0.26rem;
+    width: 5.48rem;
+    font-size: 0.24rem;
+}

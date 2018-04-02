@@ -17,7 +17,6 @@ Page({
     that.setData({
       id: parseInt(options.id)
     });
-
     util.request(api.TopicDetail, { id: that.data.id}).then(function (res) {
       if (res.errno === 0) {
 

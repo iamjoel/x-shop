@@ -91,7 +91,7 @@
       <div class="c">
         <van-swipe @change="onChange">
           <van-swipe-item class="item" v-for="item in topics" :key="item.id">
-            <a href="javascript:void(0)">
+            <a href="javascript:void(0)" @click="$router.push('/topicDetail/' + item.id)">
               <img :src="item.scene_pic_url" class="img" style="background-size:cover">
               <div class="np">
                 <span class="name">{{item.title}}</span>
