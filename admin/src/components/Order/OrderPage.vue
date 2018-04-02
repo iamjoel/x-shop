@@ -40,7 +40,7 @@
                     </el-table-column>
                     <el-table-column prop="order_status_text" label="订单状态">
                     </el-table-column>
-                    <el-table-column label="操作" width="140">
+                    <el-table-column label="操作" width="160">
                         <template scope="scope">
                             <el-button size="small" @click="handleRowEdit(scope.$index, scope.row)">查看</el-button>
                             <el-button size="small" type="danger" @click="handleRowDelete(scope.$index, scope.row)">删除</el-button>
