@@ -10,10 +10,37 @@ var routes = [
     },
   },
   {
+    path: '/topic',
+    meta: {
+      activeTypeIndex: 1,
+    },
+    component: resolve => {
+      lazyLoading(resolve, 'topic')
+    },
+  },
+  {
+    path: '/catalog',
+    meta: {
+      activeTypeIndex: 2,
+    },
+    component: resolve => {
+      lazyLoading(resolve, 'catalog')
+    },
+  },
+  {
+    path: '/cart',
+    meta: {
+      activeTypeIndex: 3,
+    },
+    component: resolve => {
+      lazyLoading(resolve, 'cart')
+    },
+  },
+  {
     path: '/goods/:id',
     meta: {
       title: '',
-      activeTypeIndex: 1,
+      activeTypeIndex: 4,
     },
     component: resolve => {
       lazyLoading(resolve, 'goods')
@@ -23,7 +50,7 @@ var routes = [
     path: '/brandDetail/:id',
     meta: {
       title: '',
-      activeTypeIndex: 2,
+      activeTypeIndex: 5,
       isShowFooter: false
     },
     component: resolve => {
@@ -34,7 +61,7 @@ var routes = [
     path: '/category/:id',
     meta: {
       title: '',
-      activeTypeIndex: 3,
+      activeTypeIndex: 6,
     },
     component: resolve => {
       lazyLoading(resolve, 'category')
@@ -44,10 +71,19 @@ var routes = [
     path: '/topicDetail/:id',
     meta: {
       title: '',
-      activeTypeIndex: 4,
+      activeTypeIndex: 7,
     },
     component: resolve => {
       lazyLoading(resolve, 'topicDetail')
+    },
+  },
+  {
+    path: '/ucenter',
+    meta: {
+      activeTypeIndex: 8,
+    },
+    component: resolve => {
+      lazyLoading(resolve, 'ucenter/index')
     },
   },
 ]

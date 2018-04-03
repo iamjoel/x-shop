@@ -11,9 +11,10 @@
     <van-tabbar v-model="activeTypeIndex" v-show="$store.state.isShowFooter">
       <van-tabbar-item icon="wap-home" url="#/">首页
       </van-tabbar-item>
-      <van-tabbar-item icon="wap-nav" url="#/classify-list">分类</van-tabbar-item>
+      <van-tabbar-item icon="pending-orders" url="#/topic">专题</van-tabbar-item>
+      <van-tabbar-item icon="wap-nav" url="#/catalog">分类</van-tabbar-item>
       <van-tabbar-item icon="gift" url="#/cart">购物车</van-tabbar-item>
-      <van-tabbar-item icon="contact" url="#/member-center">我的</van-tabbar-item>
+      <van-tabbar-item icon="contact" url="#/ucenter">我的</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
@@ -66,6 +67,11 @@ export default {
   }
 };
 </script>
+<style scoped>
+  #app {
+    height: 100%;
+  }
+</style>
 <style src="@/assets/vendor/reset.css"></style>
 <style src="@/assets/common.css"></style>
 

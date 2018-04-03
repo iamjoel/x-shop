@@ -1,0 +1,161 @@
+
+.main {
+  padding-bottom: 50px;
+  background: #f9f9f9;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.search {
+  height: 0.75rem;
+  width: 100%;
+  padding: 0 0.26rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.search .input {
+  width: 5.89rem;
+  height: 0.48rem;
+  background: #ededed;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search .icon {
+  background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/search2-2fb94833aa.png) center no-repeat;
+  background-size: 100%;
+  width: 0.24rem;
+  height: 0.24rem;
+}
+
+.search .txt {
+  height: 0.36rem;
+  line-height: 0.36rem;
+  color: #666;
+  padding-left: 0.09rem;
+  font-size: 0.26rem;
+}
+
+.catalog {
+  flex: 1;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  border-top: 1px solid #fafafa;
+}
+
+.catalog .nav {
+  width: 1.38rem;
+  height: 100%;
+}
+
+.catalog .nav .item {
+  text-align: center;
+  line-height: 0.77rem;
+  width: 1.38rem;
+  height: 0.77rem;
+  color: #333;
+  font-size: 0.24rem;
+  border-left: 0.05rem solid #fff;
+}
+
+.catalog .nav .item.active {
+  color: #ab2b2b;
+  font-size: 0.31rem;
+  border-left: 0.05rem solid #ab2b2b;
+}
+
+.catalog .cate {
+  border-left: 1px solid #fafafa;
+  flex: 1;
+  height: 100%;
+  padding: 0 0.26rem 0 0.26rem;
+}
+
+.banner {
+  display: block;
+  height: 1.89rem;
+  width: 100%;
+  position: relative;
+}
+
+.banner .image {
+  position: absolute;
+  top: 0.26rem;
+  left: 0;
+  border-radius: 2px;
+  height: 1.64rem;
+  width: 100%;
+}
+
+.banner .txt {
+  position: absolute;
+  top: 0.26rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.24rem;
+  left: 0;
+  height: 1.64rem;
+  line-height: 1.64rem;
+  width: 100%;
+}
+
+.catalog .hd {
+  height: 0.92rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalog .hd .txt {
+  font-size: 0.2rem;
+  text-align: center;
+  color: #333;
+  padding: 0 0.09rem;
+  width: auto;
+}
+
+.catalog .hd .line {
+  width: 0.34rem;
+  height: 1px;
+  background: #d9d9d9;
+}
+
+.catalog .bd {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.catalog .bd .item {
+  display: block;
+  float: left;
+  height: 1.84rem;
+  width: 1.2rem;
+  margin-right: 0.29rem;
+}
+
+.catalog .bd .item.last {
+  margin-right: 0;
+}
+
+.catalog .bd .item .icon {
+  height: 1.23rem;
+  width: 1.23rem;
+}
+
+.catalog .bd .item .txt {
+  display: block;
+  text-align: center;
+  font-size: 0.2rem;
+  color: #333;
+  height: 0.61rem;
+  width: 1.23rem;
+}
