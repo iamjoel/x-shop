@@ -1,4 +1,4 @@
-const SERVER = 'http://127.0.0.1:8360'
+const SERVER = 'https://zhixingclub.com'
 const rootUrl = `${SERVER}/admin/`;
 
 const api = {

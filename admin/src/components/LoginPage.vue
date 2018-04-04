@@ -19,7 +19,7 @@
                     </el-form-item>
                 </el-form>
 
-                <p class="author">Created by <a href="https://github.com/tumobi" target="_blank">tumobi</a></p>
+                <!-- <p class="author">Created by <a href="https://github.com/tumobi" target="_blank">tumobi</a></p> -->
             </div>
         </div>
     </div>
@@ -55,7 +55,7 @@
 
                     this.loading = true;
 
-                    this.axios.post('http://127.0.0.1:8360/admin/auth/login', {
+                    this.axios.post('https://zhixingclub.com/admin/auth/login', {
                         username: this.form.username,
                         password: this.form.password
                     }).then((res) => {

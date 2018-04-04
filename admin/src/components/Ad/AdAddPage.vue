@@ -20,7 +20,7 @@
                     
                     <el-form-item label="图片" prop="image_url">
                         <el-upload class="image-uploader" name="wap_banner_pic"
-                                   action="http://127.0.0.1:8360/admin/upload/categoryWapBannerPic" :show-file-list="false"
+                                   action="https://zhixingclub.com/admin/upload/categoryWapBannerPic" :show-file-list="false"
                                    :on-success="handleUploadImageSuccess" :headers="uploaderHeader">
                             <img v-if="infoForm.image_url" :src="infoForm.image_url" class="image-show">
                             <i v-else class="el-icon-plus image-uploader-icon"></i>
