@@ -31,46 +31,31 @@ export default {
     }
   },
   methods: {
-    nextPage (event) {
-      console.log();
-        if (this.data.page+1 > this.data.count / this.data.size) {
-            return true;
-        }
-
-        
-          this.page = parseInt(this.data.page) + 1
-
-        this.getTopic();
-        
-    },
     getTopic() {
-          this.scrollTop = 0,
-          this.showPage = false,
-          this.topicList = []
+         this.scrollTop = 0
+         this.showPage = false
+         this.topicList = []
         // 页面渲染完成
-        this.wx.showToast({
-            title: '加载中...',
-            icon: 'loading',
-            duration: 2000
-        });
+        // this.showToast({
+        //     title: '加载中...',
+        //     icon: 'loading',
+        //     duration: 2000
+        // });
 
-        this.$http.get(`${api.TopicList}, `).then(res => {
-          if (res.errno === 0) {
-
-            that.setData({
-              scrollTop: 0,
-              topicList: res.data.data,
-              showPage: true,
-              count: res.data.count
-            });
+        this.$http.get(`${urls.TopicList}?page=${this.page}&size=${this.size}`).then(res => {
+          debugger
+          if (res.data.errno === 0) {
+            this.scrollTop = 0
+            this.topicList = res.data.data.data
+            this.showPage = true
+            this.count = res.data.data.count
           }
-          wx.hideToast();
         });
         
     },
   },
   mounted() {
-    
+    this.getTopic()
   }
 }
 </script>

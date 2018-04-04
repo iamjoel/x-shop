@@ -38,6 +38,7 @@ Page({
     let that = this;
     util.request(api.CatalogCurrent, { id: id })
       .then(function (res) {
+        debugger
         that.setData({
           currentCategory: res.data.currentCategory
         });
@@ -57,6 +58,7 @@ Page({
   },
   getList: function () {
     var that = this;
+    debugger
     util.request(api.ApiRootUrl + 'api/catalog/' + that.data.currentCategory.cat_id)
       .then(function (res) {
         that.setData({
