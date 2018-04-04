@@ -36,7 +36,7 @@
           </el-form-item>
           <el-form-item label="商品主图" prop="primary_pic_url">
             <el-upload class="image-uploader" name="brand_pic"
-                       action="http://127.0.0.1:8360/admin/upload/brandPic" :show-file-list="true"
+                       action="https://zhixingclub.com/admin/upload/brandPic" :show-file-list="true"
                        :on-success="handleUploadPrimaryImageSuccess" :headers="uploaderHeader">
               <img v-if="infoForm.primary_pic_url" :src="infoForm.primary_pic_url" class="image-show">
               <i v-else class="el-icon-plus image-uploader-icon"></i>
@@ -45,7 +45,7 @@
           </el-form-item>
           <el-form-item label="商品列表图片" prop="list_pic_url">
             <el-upload class="image-uploader" name="brand_pic"
-                       action="http://127.0.0.1:8360/admin/upload/brandPic" :show-file-list="true"
+                       action="https://zhixingclub.com/admin/upload/brandPic" :show-file-list="true"
                        :on-success="handleUploadImageSuccess" :headers="uploaderHeader">
               <img v-if="infoForm.list_pic_url" :src="infoForm.list_pic_url" class="image-show">
               <i v-else class="el-icon-plus image-uploader-icon"></i>
