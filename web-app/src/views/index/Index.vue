@@ -67,7 +67,7 @@
       </div>
       <div class="c">
         <div class="item" v-for="item in hotGoods" :key="item.id">
-          <a href="javascript:void(0)">
+          <a href="javascript:void(0)" @click="$router.push('/goods/' + item.id)">
             <img :src="item.list_pic_url" class="img" style="background-size:cover">
             <div class="right">
               <div class="text">
@@ -112,7 +112,7 @@
       <div class="c">
         <div v-for="(secondCategory, index) in firstCategory.goodsList" :key="secondCategory.id">
           <div class="item" :class="index % 2 == 0 ? '' : 'item-b'">
-            <a href="javascript:void(0)" class="a">
+            <a href="javascript:void(0)" class="a" @click="$router.push('/goods/' + secondCategory.id)">
               <img :src="secondCategory.list_pic_url" class="img" style="background-size:cover">
               <span class="name">{{secondCategory.name}}</span>
               <span class="price">￥{{secondCategory.retail_price}}</span>
@@ -120,7 +120,7 @@
           </div>
         </div>
         <div class="item item-b item-more">
-          <a href="javascript:void(0)" class="more-a">
+          <a href="javascript:void(0)" class="more-a" @click="$router.push('/category/' + floorGoods.id)">
             <div class="txt">{{'更多'+firstCategory.name+'好物'}}</div>
             <img src="./imagse/1.png" class="icon" style="background-size:cover">
           </a>

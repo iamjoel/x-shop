@@ -86,6 +86,15 @@ var routes = [
       lazyLoading(resolve, 'ucenter/index')
     },
   },
+  {
+    path: '/commentPost/:id',
+    meta: {
+      activeTypeIndex: 8,
+    },
+    component: resolve => {
+      lazyLoading(resolve, 'commentPost')
+    },
+  },
 ]
 
 

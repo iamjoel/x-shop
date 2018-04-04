@@ -91,7 +91,7 @@
         </div>
         <div class="b">
           <div class="item" v-for="item in relatedGoods" :key="item.id">
-            <a href="javascript:void(0)">
+            <a href="javascript:void(0)" @click="$router.push('/goods/' + item.id)">
               <img :src="item.list_pic_url" class="img">
               <span class="name">{{item.name}}</span>
               <span class="price">￥{{item.retail_price}}</span>
@@ -168,6 +168,11 @@ export default {
       noCollectImage: "/static/images/icon_collect.png",
       hasCollectImage: "/static/images/icon_collect_checked.png",
       collectBackImage: "/static/images/icon_collect.png"
+    }
+  },
+  watch: {
+    ['$route.params.id']() {
+      this.fecthDatas()
     }
   },
   methods: {
@@ -291,11 +296,14 @@ export default {
     //       });
     //   }
     // }
+    fecthDatas() {
+      this.id = this.$route.params.id
+      this.getGoodsInfo()
+      this.getGoodsRelated()
+    }
   },
   mounted() {
-    this.id = this.$route.params.id
-    this.getGoodsInfo()
-    this.getGoodsRelated()
+    this.fecthDatas()
   }
 }
 </script>

@@ -65,7 +65,6 @@ export default {
     // }
   },
   mounted() {
-    debugger
     this.id = this.$route.params.id
     this.getBrand()
     this.getGoodsList()

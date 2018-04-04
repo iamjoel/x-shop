@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="topic-list">
-      <a href="javascript:void(0)" class="item" v-for="item in topicList" :key="item.id">
+      <a href="javascript:void(0)" class="item" v-for="item in topicList" :key="item.id" @click="$router.push('/topicDetail/' + item.id)">
         <img :src="item.scene_pic_url" class="img">
         <div class="info">
           <span class="title">{{item.title}}</span>
@@ -31,6 +31,18 @@ export default {
     }
   },
   methods: {
+    // nextPage(page) {
+    //   console.log();
+    //     if (this.data.page+1 > this.data.count / this.data.size) {
+    //         return true;
+    //     }
+
+        
+    //        var page = parseInt(this.data.page) + 1
+
+    //     this.getTopic(page);
+        
+    // },
     getTopic() {
          this.scrollTop = 0
          this.showPage = false
@@ -43,7 +55,6 @@ export default {
         // });
 
         this.$http.get(`${urls.TopicList}?page=${this.page}&size=${this.size}`).then(res => {
-          debugger
           if (res.data.errno === 0) {
             this.scrollTop = 0
             this.topicList = res.data.data.data
@@ -53,6 +64,16 @@ export default {
         });
         
     },
+    // prevPage(page) {
+    //     if (this.data.page <= 1) {
+    //         return false;
+    //     }
+
+    //     this.setData({
+    //         "page": parseInt(this.data.page) - 1
+    //     });
+    //     this.getTopic(page);
+    // }
   },
   mounted() {
     this.getTopic()

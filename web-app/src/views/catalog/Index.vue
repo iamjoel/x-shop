@@ -21,7 +21,7 @@
           <span class="line"></span>
         </div>
         <div class="bd">
-          <a href="javascript:void(0)" class="item" :class="(index+1) % 3 == 0 ? 'last' : ''" v-for="(item, index) in currentCategory.subCategoryList" :key="item.id">
+          <a href="javascript:void(0)" class="item" :class="(index+1) % 3 == 0 ? 'last' : ''" v-for="(item, index) in currentCategory.subCategoryList" :key="item.id" @click="$router.push('/category/' + item.id)">
             <img :src="item.wap_banner_url" class="icon">
             <span class="txt">{{item.name}}</span>
           </a>

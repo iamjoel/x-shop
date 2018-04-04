@@ -1,0 +1,87 @@
+.main{
+    width: 100%;
+    height: auto;
+    padding-left: 0.26rem;
+    background: #fff;
+    margin: 0.17rem 0;
+}
+
+.main .b{
+    height: auto;
+    width: 6.14rem;
+}
+
+.main .b.no-h{
+    margin-top: 0;
+}
+
+.main .item{
+    height: auto;
+    width: 6.14rem;
+    overflow: hidden;
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 0.21rem;
+}
+
+.main .info{
+    height: 1.08rem;
+    width: 100%;
+    padding: 0.28rem 0 0.23rem 0;
+}
+
+.main .user{
+    float: left;
+    width: auto;
+    height: 0.57rem;
+    line-height: 0.57rem;
+    font-size: 0;
+}
+
+.main .user img{
+    float: left;
+    width: 0.57rem;
+    height: 0.57rem;
+    margin-right: 0.15rem;
+    border-radius: 50%;
+}
+
+.main .user span{
+    display: inline-block;
+    width: auto;
+    height: 0.56rem;
+    overflow: hidden;
+    font-size: 0.25rem;
+    line-height: 0.56rem;
+}
+
+.main .time{
+    display: block;
+    float: right;
+    width: auto;
+    height: 0.57rem;
+    line-height: 0.57rem;
+    color: #7f7f7f;
+    font-size: 0.21rem;
+    margin-right: 0.26rem;
+}
+
+.main .comment{
+    width: 6.14rem;
+    padding-right: 0.26rem;
+    line-height: 0.39rem;
+    font-size: 0.25rem;
+    margin-bottom: 0.14rem;
+}
+
+.main .imgs{
+    width: 6.14rem;
+    height: 1.28rem;
+    margin-bottom: 0.21rem;
+}
+
+.main .imgs .img{
+    height: 1.28rem;
+    width: 1.28rem;
+    margin-right: 0.24rem;
+}
+

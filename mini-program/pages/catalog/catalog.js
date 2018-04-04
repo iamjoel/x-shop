@@ -38,7 +38,6 @@ Page({
     let that = this;
     util.request(api.CatalogCurrent, { id: id })
       .then(function (res) {
-        debugger
         that.setData({
           currentCategory: res.data.currentCategory
         });
