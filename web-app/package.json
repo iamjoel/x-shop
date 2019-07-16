@@ -20,7 +20,7 @@
     "vue": "^2.5.0",
     "vue-router": "^3.0.0",
     "vuex": "^2.4.0",
-    "yarn": "^1.0.0"
+    "yarn": "^1.17.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
