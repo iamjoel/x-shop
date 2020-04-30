@@ -7,7 +7,9 @@
     "debug": "node --inspect development.js",
     "compile": "babel --no-babelrc src/ --presets think-node --out-dir app/",
     "lint": "eslint src/",
-    "lint-fix": "eslint --fix src/"
+    "lint-fix": "eslint --fix src/",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "fs-extra": "^5.0.0",
@@ -26,7 +28,8 @@
     "think-model-mysql": "^1.0.0",
     "thinkjs": "^3.0.0",
     "weixinpay": "^1.0.12",
-    "xml2js": "^0.4.19"
+    "xml2js": "^0.4.19",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -43,5 +46,6 @@
   "engines": {
     "node": ">=6.0.0"
   },
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "snyk": true
 }
